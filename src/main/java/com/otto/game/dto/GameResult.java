@@ -1,22 +1,20 @@
 package com.otto.game.dto;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
-@Getter
-@Setter
+import java.util.ArrayList;
+import java.util.List;
+
+
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class GameResult {
-    private int player1Wins;
-    private int player2Wins;
-    private int ties;
-    private String gameResult;
+    // TODO : CleanUp above
+    private int gameId;
+    private List<String> gameResults;
+    private int remainingAttempts;
+    private String finalWinner;
 
-    public GameResult(int player1Wins, int player2Wins, int ties, String gameResult) {
-        this.player1Wins = player1Wins;
-        this.player2Wins = player2Wins;
-        this.ties = ties;
-        this.gameResult = gameResult;
-    }
 }

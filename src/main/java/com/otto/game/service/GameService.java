@@ -1,50 +1,84 @@
 package com.otto.game.service;
 
+import com.otto.game.Model.Game;
 import com.otto.game.dto.GameResult;
 import com.otto.game.dto.HandSign;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 @Service
 public class GameService {
+    // TODO : make AtomicInteger
+    private int maxRound = 3;
+    int gameId = 0;
+    Map<Integer, GameResult> gameMap = new ConcurrentHashMap<>();
 
-    public GameResult playThreeRounds() {
-        int player1Wins = 0;
-        int player2Wins = 0;
-        int ties = 0;
-
-        for (int round = 1; round <= 3; round++) {
-            HandSign player1Sign = getRandomSign();
-            HandSign player2Sign = getRandomSign();
-
-            // Determine the winner of the round
-            int roundResult = determineRoundWinner(player1Sign, player2Sign);
-
-            // Update the counts
-            if (roundResult == 1) {
-                player1Wins++;
-            } else if (roundResult == 2) {
-                player2Wins++;
-            } else {
-                ties++;
-            }
-        }
-
-        String gameResult;
-        if (player1Wins > player2Wins) {
-            gameResult = "Player 1 wins";
-        } else if (player2Wins > player1Wins) {
-            gameResult = "Player 2 wins";
+    public GameResult playThreeRounds(Game game) {
+        if (!gameMap.containsKey(game.getGameId())) {
+            // new player
+            game.setGameId(gameId++);
+            game.setRemainingAttempts(maxRound);
+            return getGameResultPerRound(game, maxRound, true);
+            // 2nd time or third
+        } else if (gameMap.containsKey(game.getGameId()) && gameMap.get(game.getGameId()).getRemainingAttempts() > 0) {
+            return getGameResultPerRound(game, gameMap.get(game.getGameId()).getRemainingAttempts(), false);
         } else {
-            gameResult = "It's a tie";
+            // end of the game
+            System.out.println("Attempt exceed");
+            return getGameResultPerRound(game, gameMap.get(game.getGameId()).getRemainingAttempts(), false);
         }
 
-        return new GameResult(player1Wins, player2Wins, ties, gameResult);
     }
 
-    public HandSign getRandomSign() {
-        HandSign[] values = HandSign.values();
-        int randomIndex = (int) (Math.random() * values.length);
-        return values[randomIndex];
+    public GameResult getGameResultPerRound(Game game, int remainingAttempts, boolean isFirst) {
+        GameResult gameResult;
+        if (isFirst) {
+            gameResult = new GameResult();
+            gameResult.setGameResults(new ArrayList<>());
+        } else {
+            gameResult = gameMap.get(gameId);
+        }
+
+        if (remainingAttempts == 0) {
+            List<String> resultList = gameMap.values()
+                    .stream()
+                    .filter(gameResultMap -> gameResultMap.getGameId() == game.getGameId())
+                    .map(GameResult::getGameResults)
+                    .flatMap(List::stream)
+                    .collect(Collectors.toList());
+            return new GameResult(game.getGameId(), resultList, remainingAttempts, getResult(game.getGameId(), gameMap));
+        } else {
+            HandSign player1Sign = game.getPlayerOneHandSign();
+            HandSign player2Sign = game.getPlayerTwoHandSign();
+            int roundResult = determineRoundWinner(player1Sign, player2Sign);
+            gameResult.setGameId(gameId);
+            gameResult.setRemainingAttempts(remainingAttempts - 1);
+            if (roundResult == 1) {
+                gameResult.getGameResults().add("Player1");
+            } else if (roundResult == 2) {
+                gameResult.getGameResults().add("Player2");
+            } else {
+                gameResult.getGameResults().add("tie");
+            }
+            gameMap.put(gameId, gameResult);
+        }
+        return gameResult;
+    }
+
+    private String getResult(int gameId, Map<Integer, GameResult> gameMap) {
+        return gameMap.get(gameId).getGameResults().stream()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet()
+                .stream()
+                .max(Map.Entry.comparingByValue())
+                .map(Map.Entry::getKey)
+                .orElse(null);
     }
 
     public int determineRoundWinner(HandSign player1Sign, HandSign player2Sign) {
