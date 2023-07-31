@@ -1,6 +1,11 @@
 # Game
 
 
+    Rock, Paper, Scissors is a simple game usually played between two people. The players count to three in unison and simultaneously throw one of three hand signs representing rock, paper, or scissors. The winner of the game is determined by the rules below:
+
+        1. **Rock** crushes scissors (Rock wins) 
+        2. **Scissors** cuts paper (Scissors wins)
+        3. **Paper** covers rock (Paper wins)
 
 # Requirements
          1. Java 17
