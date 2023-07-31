@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d76ee79e-ed87-4992-af64-9a537f57b775" name="Changes" comment="new changes" />
+    <list default="true" id="d76ee79e-ed87-4992-af64-9a537f57b775" name="Changes" comment="new changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/otto/game/service/GameServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/otto/game/service/GameServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +62,7 @@
       <recent name="com.otto.game.Model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GameApplication">
+  <component name="RunManager" selected="JUnit.GameServiceTest">
     <configuration name="GameApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.otto.game.GameApplication" />
       <module name="game" />
@@ -71,7 +76,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameServiceTest.testDetermineRoundWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="game" />
       <extension name="coverage">
         <pattern>
@@ -81,8 +86,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.otto.game.service" />
       <option name="MAIN_CLASS_NAME" value="com.otto.game.service.GameServiceTest" />
-      <option name="METHOD_NAME" value="testDetermineRoundWinner" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameServiceTest" />
         <item itemvalue="Application.GameApplication" />
         <item itemvalue="JUnit.GameServiceTest.testPlayTie" />
         <item itemvalue="JUnit.GameServiceTest.testPlayThreeRoundsExistingPlayer" />
         <item itemvalue="JUnit.GameServiceTest.testPlayThreeRoundsFinalWinner" />
-        <item itemvalue="JUnit.GameServiceTest.testDetermineRoundWinner" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690764921627</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="new changes">
+      <created>1690765052680</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690765052680</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -274,7 +285,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
-          <line>27</line>
+          <line>26</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -284,12 +295,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
-          <line>33</line>
+          <line>32</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
-          <line>42</line>
+          <line>41</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -324,7 +335,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
-          <line>41</line>
+          <line>40</line>
           <properties class="com.otto.game.service.GameServiceImpl" method="getGameResultPerRound">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service
@@ -75,13 +74,25 @@ public class GameServiceImpl implements GameService{
     }
 
     private String getResult(int gameId, Map<Integer, GameResult> gameMap) {
-        return gameMap.get(gameId).getGameResults().stream()
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet()
-                .stream()
-                .max(Map.Entry.comparingByValue())
-                .map(Map.Entry::getKey)
-                .orElse(null);
+        long player1Wins=gameMap.values().stream()
+                .map(GameResult::getGameResults)
+                .flatMap(List::stream)
+                .filter("Player1"::equals)
+                .count();
+        long player2Wins=gameMap.values().stream()
+                .map(GameResult::getGameResults)
+                .flatMap(List::stream)
+                .filter("Player2"::equals)
+                .count();
+        String gameResult;
+        if (player1Wins > player2Wins) {
+            gameResult = "Player 1 wins";
+        } else if (player2Wins > player1Wins) {
+            gameResult = "Player 2 wins";
+        } else {
+            gameResult = "It's a tie";
+        }
+        return gameResult;
     }
 
     public int determineRoundWinner(HandSign player1Sign, HandSign player2Sign) {
