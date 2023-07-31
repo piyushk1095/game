@@ -4,16 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d76ee79e-ed87-4992-af64-9a537f57b775" name="Changes" comment="read me file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/otto/game/Model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="d76ee79e-ed87-4992-af64-9a537f57b775" name="Changes" comment="new changes">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/game.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/otto/game/Model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/otto/game/Model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/otto/game/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/otto/game/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/otto/game/dto/GameResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/otto/game/dto/GameResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/otto/game/dto/GameResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/otto/game/Model/GameResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/otto/game/dto/HandSign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/otto/game/Model/HandSign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/otto/game/util/GameUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/otto/game/Model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/otto/game/Model/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/otto/game/controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/otto/game/controller/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/otto/game/dto/GameResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/otto/game/dto/GameResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/otto/game/dto/GameResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/otto/game/dto/HandSign.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/otto/game/service/GameService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/otto/game/service/GameService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/otto/game/util/GameUtil.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -58,6 +71,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -65,7 +79,7 @@
       <recent name="com.otto.game.Model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GameApplication">
     <configuration name="GameApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.otto.game.GameApplication" />
       <module name="game" />
@@ -79,9 +93,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameServiceTest.testDetermineRoundWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.otto.game.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.otto.game.service" />
+      <option name="MAIN_CLASS_NAME" value="com.otto.game.service.GameServiceTest" />
+      <option name="METHOD_NAME" value="testDetermineRoundWinner" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameServiceTest.testPlayThreeRoundsExistingPlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.otto.game.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.otto.game.service" />
+      <option name="MAIN_CLASS_NAME" value="com.otto.game.service.GameServiceTest" />
+      <option name="METHOD_NAME" value="testPlayThreeRoundsExistingPlayer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameServiceTest.testPlayThreeRoundsFinalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.otto.game.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.otto.game.service" />
+      <option name="MAIN_CLASS_NAME" value="com.otto.game.service.GameServiceTest" />
+      <option name="METHOD_NAME" value="testPlayThreeRoundsFinalWinner" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameServiceTest.testPlayTie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.otto.game.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.otto.game.service" />
+      <option name="MAIN_CLASS_NAME" value="com.otto.game.service.GameServiceTest" />
+      <option name="METHOD_NAME" value="testPlayTie" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameApplication" />
+        <item itemvalue="JUnit.GameServiceTest.testPlayTie" />
+        <item itemvalue="JUnit.GameServiceTest.testPlayThreeRoundsExistingPlayer" />
+        <item itemvalue="JUnit.GameServiceTest.testPlayThreeRoundsFinalWinner" />
+        <item itemvalue="JUnit.GameServiceTest.testDetermineRoundWinner" />
       </list>
     </recent_temporary>
   </component>
@@ -115,7 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1690584995482</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="new changes">
+      <created>1690726712359</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690726712360</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new changes">
+      <created>1690726732708</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690726732709</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,66 +229,158 @@
     <MESSAGE value="git ignore" />
     <MESSAGE value="Rock, Paper, Scissors game" />
     <MESSAGE value="read me file" />
-    <option name="LAST_COMMIT_MESSAGE" value="read me file" />
+    <MESSAGE value="new changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="new changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/controller/GameController.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java</url>
-          <line>47</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>51</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java</url>
-          <line>22</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>27</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java</url>
-          <line>28</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>33</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java</url>
-          <line>30</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>35</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java</url>
-          <line>61</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>65</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java</url>
-          <line>56</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>60</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java</url>
-          <line>33</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>37</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java</url>
-          <line>68</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>72</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/otto/game/service/GameServiceTest.java</url>
+          <line>122</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/otto/game/service/GameServiceTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/otto/game/service/GameServiceTest.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/otto/game/service/GameServiceTest.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/controller/GameController.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/controller/GameController.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/controller/GameController.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/controller/GameController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameService.java</url>
-          <line>38</line>
-          <properties class="com.otto.game.service.GameService" method="getGameResultPerRound">
+          <url>file://$PROJECT_DIR$/src/main/java/com/otto/game/service/GameServiceImpl.java</url>
+          <line>41</line>
+          <properties class="com.otto.game.service.GameServiceImpl" method="getGameResultPerRound">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/otto/game/service/GameServiceTest.java</url>
+          <line>44</line>
+          <properties class="com.otto.game.service.GameServiceTest" method="testPlayThreeRoundsExistingPlayer">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testPlayThreeRoundsFinalWinner.ic" NAME="GameServiceTest.testPlayThreeRoundsFinalWinner Coverage Results" MODIFIED="1690757521091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testDetermineRoundWinner.ic" NAME="GameServiceTest.testDetermineRoundWinner Coverage Results" MODIFIED="1690757590002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testPlayThreeRoundsExistingPlayer.ic" NAME="GameServiceTest.testPlayThreeRoundsExistingPlayer Coverage Results" MODIFIED="1690758084384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testPlayTie.ic" NAME="GameServiceTest.testPlayTie Coverage Results" MODIFIED="1690758196353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testPlayThreeRounds_FinalWinner.ic" NAME="GameServiceTest.testPlayThreeRounds_FinalWinner Coverage Results" MODIFIED="1690755104269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testPlayThreeRoundsNewPlayer.ic" NAME="GameServiceTest.testPlayThreeRoundsNewPlayer Coverage Results" MODIFIED="1690756290746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testPlayThreeRounds_ThirdRoundExistingPlayer.ic" NAME="GameServiceTest.testPlayThreeRounds_ThirdRoundExistingPlayer Coverage Results" MODIFIED="1690755751649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testPlayThreeRounds_NewPlayer.ic" NAME="GameServiceTest.testPlayThreeRounds_NewPlayer Coverage Results" MODIFIED="1690756080480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testPlayThreeRounds_ExistingPlayer.ic" NAME="GameServiceTest.testPlayThreeRounds_ExistingPlayer Coverage Results" MODIFIED="1690755043891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/game$GameServiceTest_testPlayThreeRounds_FinalWinnerR.ic" NAME="GameServiceTest.testPlayThreeRounds_FinalWinnerR Coverage Results" MODIFIED="1690755313645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.otto.game.service.*</FILTER>
+    </SUITE>
   </component>
 </project>

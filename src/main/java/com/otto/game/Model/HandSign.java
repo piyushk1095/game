@@ -1,4 +1,4 @@
-package com.otto.game.dto;
+package com.otto.game.Model;
 
 public enum HandSign {
     ROCK, PAPER, SCISSORS

@@ -2,9 +2,11 @@ package com.otto.game.controller;
 
 
 import com.otto.game.Model.Game;
-import com.otto.game.dto.GameResult;
-import com.otto.game.service.GameService;
+import com.otto.game.Model.GameResult;
+import com.otto.game.service.GameServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,19 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GameController {
     @Autowired
-    GameService gameService;
-
-/*
-    @GetMapping("/play")
-    public ResponseEntity<GameResult> playGame() {
-     //   GameResult gameResult = gameService.playThreeRounds();
-        return new ResponseEntity<>(gameResult, HttpStatus.OK);
-    }
-*/
+    GameServiceImpl gameService;
 
     @PostMapping("/play")
-    public GameResult playRockScissorPaper(@RequestBody Game game) {
-        return gameService.playThreeRounds(game);
+    public ResponseEntity<?> playRockScissorPaper(@RequestBody Game game) {
+        if (game.getPlayerOneHandSign() != null && game.getPlayerTwoHandSign() != null) {
+            GameResult result = gameService.playThreeRounds(game);
+            return new ResponseEntity<>(result, HttpStatus.OK);
+        } else {
+            String errorMessage = "Both playerOneHandSign and playerTwoHandSign must be provided.";
+            return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
+        }
     }
 }
 
