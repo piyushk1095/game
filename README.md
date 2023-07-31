@@ -155,7 +155,7 @@ The API accepts a POST request with the following JSON structure as the request 
         
         3. If there are no remaining attempts (i.e., `gameMap.get(game.getGameId()).getRemainingAttempts() <= 0`), it means the game is over. It calls the `getGameResultPerRound` method with `false` as the last parameter, indicating it's not the first round, and returns the result. This will be the final game result for the player.
         
-        In summary, the `playThreeRounds` method handles three scenarios: for a new player, it initializes the game and starts the first round. For the second and third rounds, it continues the game, updating the remaining attempts. Finally, for the fourth round onwards (when `maxRound` rounds are played), it returns the final game result. The actual game result calculation and updates are done in the `getGameResultPerRound` method.
+        In summary, the `playGame` method handles three scenarios: for a new player, it initializes the game and starts the first round. For the second and third rounds, it continues the game, updating the remaining attempts. Finally, for the fourth round onwards (when `maxRound` rounds are played), it returns the final game result. The actual game result calculation and updates are done in the `getGameResultPerRound` method.
 
     Method 
     
