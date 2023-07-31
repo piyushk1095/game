@@ -74,6 +74,7 @@ public class GameServiceImpl implements GameService{
             } else {
                 gameResult.getGameResults().add("tie");
             }
+            gameMap.put(game.getGameId(), gameResult);
         }
         return gameResult;
     }
