@@ -28,10 +28,10 @@
 ```Bash
     http://localhost:8080/play
 ```    
-###Request Body:-
+### Request Body:-
 
 
-####Game Round 1
+### Game Round 1
 ```jsonResponse
 The API accepts a POST request with the following JSON structure as the request body:
 
@@ -41,7 +41,8 @@ The API accepts a POST request with the following JSON structure as the request 
     }
 ```
 
-####Output
+#### Output
+
 ```jsonResponse
     {
         "gameId": 1,
@@ -53,7 +54,7 @@ The API accepts a POST request with the following JSON structure as the request 
     }
 ```
 
-####Game Round 2 & 3
+#### Game Round 2 & 3
 ```jsonResponse
 It appears that you want to continue playing the game for Round 2. To do so, you should make a new request to the /play API endpoint with the updated information for Round 2 and Round 3. 
 Here's how the request body for Round 2 would look like below.
@@ -65,7 +66,7 @@ The API accepts a POST request with the following JSON structure as the request 
         "playerTwoHandSign"  :"ROCK"
     }
 ```
-####Output
+#### Output
 ```jsonResponse
     {
         "gameId": 1,
@@ -82,7 +83,7 @@ The API accepts a POST request with the following JSON structure as the request 
     3-remainingAttempts: The number of remaining attempts to play the game after the current request. It can help to keep track of the number of times the game can be played.
     4-finalWinner: The ultimate winner of the game after all attempts are completed. It will be null until all rounds are played, and a winner is determined.
     
-###finalWinner
+### finalWinner
     For the final winner response request for the fourth time with same id 
 
     {   
@@ -104,7 +105,7 @@ The API accepts a POST request with the following JSON structure as the request 
         "finalWinner": "Player2"
     }
 ```
-###Hand Sign Game Rules
+### Hand Sign Game Rules
     The hand sign game follows the conventional rules:
 
         - "ROCK" beats "SCISSORS"
