@@ -24,12 +24,13 @@
 
     - playerOneHandSign: The chosen hand sign of player one. It can be one of the following values: "ROCK", "PAPER", or "SCISSORS".
     - playerTwoHandSign: The chosen hand sign of player two. It can be one of the following values: "ROCK", "PAPER", or "SCISSORS".
-
+#### POST request
 ```Bash
     http://localhost:8080/play
 ```    
 ### Request Body:-
-
+    To run the game for the 1st round gameId will be empty and for the 2nd and 3rd round need to use gameId which get in output of response.
+    And if the playerOneHandSign and playerTwoHandSign any of the field empty it will give the message 'Both playerOneHandSign and playerTwoHandSign must be provided.'
 
 ### Game Round 1
 ```jsonResponse
@@ -105,6 +106,26 @@ The API accepts a POST request with the following JSON structure as the request 
         "finalWinner": "Player2"
     }
 ```
+#### GET request
+```Bash
+   http://localhost:8080/winner/{gameId}
+```    
+    If want to get the winner details which game is already is played by game id.
+    And if wrong if is given then there will be msg comes "Invalid ID please provide the valid gameid otherwise play again".
+
+```jsonResponse
+    {
+        "gameId": 4,
+        "gameResults": [
+            "Player1",
+            "Player1",
+            "Player1"
+        ],
+        "remainingAttempts": 0,
+        "finalWinner": "Player 1 wins"
+    }
+```
+
 ### Hand Sign Game Rules
     The hand sign game follows the conventional rules:
 
