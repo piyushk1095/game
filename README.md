@@ -127,9 +127,9 @@ The API accepts a POST request with the following JSON structure as the request 
 
     Method
     
-    public GameResult playThreeRounds(Game game)
+    GameResult playGame(Game game)
     
-           The `playThreeRounds` method simulates a game of Rock-Paper-Scissors for three rounds based on the given `Game` object and keeps track of the game results using the `gameMap`, which is a `Map` where the key is the `gameId`, and the value is a `GameResult` object.
+           The `playGame` method simulates a game of Rock-Paper-Scissors for three rounds based on the given `Game` object and keeps track of the game results using the `gameMap`, which is a `Map` where the key is the `gameId`, and the value is a `GameResult` object.
         
         Here's a short explanation of the method:
         
@@ -161,9 +161,9 @@ The API accepts a POST request with the following JSON structure as the request 
             
     Method -
     
-        String getResult(int gameId, Map<Integer, GameResult> gameMap)
+         private String determineFinalWinner(int gameId, Map<Integer, GameResult> gameMap)
     
-            The `getResult` method takes two parameters: `gameId` and `gameMap`. It aims to determine the overall result of a game, which contains multiple rounds, based on the number of times each player (Player 1 and Player 2) wins in the `gameResults` lists of the `GameResult` objects associated with the given `gameId` in the `gameMap`.
+            The `determineFinalWinner` method takes two parameters: `gameId` and `gameMap`. It aims to determine the overall result of a game, which contains multiple rounds, based on the number of times each player (Player 1 and Player 2) wins in the `gameResults` lists of the `GameResult` objects associated with the given `gameId` in the `gameMap`.
         
         1. Based on the number of wins, the method then determines the overall result of the game. If `player1Wins` is greater than `player2Wins`, it sets `gameResult` to "Player 1 wins." If `player2Wins` is greater than `player1Wins`, it sets `gameResult` to "Player 2 wins." Otherwise, if both have the same number of wins, it sets `gameResult` to "It's a tie."
         
