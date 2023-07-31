@@ -31,7 +31,7 @@ public class GameServiceTest {
         game.setPlayerTwoHandSign(HandSign.SCISSORS);
 
         // When
-        GameResult gameResult = gameService.playThreeRounds(game);
+        GameResult gameResult = gameService.playGame(game);
 
         // Then
         assertNotNull(gameResult);
@@ -52,7 +52,7 @@ public class GameServiceTest {
         gameService.gameId = 1;
         gameService.gameMap.put(1, new GameResult(1, new ArrayList<>(), 2, null)); // Add existing game result
         // When
-        GameResult gameResult = gameService.playThreeRounds(game);
+        GameResult gameResult = gameService.playGame(game);
 
         // Then
         assertNotNull(gameResult);
@@ -74,7 +74,7 @@ public class GameServiceTest {
         gameService.gameId = 1;
         gameService.gameMap.put(1, new GameResult(1, new ArrayList<>(), 2, null)); // Add existing game result
         // When
-        GameResult gameResult = gameService.playThreeRounds(game);
+        GameResult gameResult = gameService.playGame(game);
 
         // Then
         assertNotNull(gameResult);
@@ -94,7 +94,7 @@ public class GameServiceTest {
         gameService.gameMap.put(2, new GameResult(2, List.of("Player1", "Player2", "tie"), 0, null)); // Add existing game result
 
         // When
-        GameResult gameResult = gameService.playThreeRounds(game);
+        GameResult gameResult = gameService.playGame(game);
 
         // Then
         assertNotNull(gameResult);

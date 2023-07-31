@@ -19,13 +19,17 @@ public class GameServiceImpl implements GameService{
     @Value("${max.game.round}")
     int maxRound;
     int gameId = 0;
-    Map<Integer, GameResult> gameMap = new ConcurrentHashMap<>();
+   public  Map<Integer, GameResult> gameMap = new ConcurrentHashMap<>();
 
     @Override
-    public GameResult playThreeRounds(Game game) {
+    public GameResult playGame(Game game) {
         if (!gameMap.containsKey(game.getGameId())) {
             // new player
-            game.setGameId(gameId++);
+            if(game.getGameId()==0) {
+                game.setGameId(++gameId);
+            }else {
+                gameId=game.getGameId();
+            }
             game.setRemainingAttempts(maxRound);
             return getGameResultPerRound(game, maxRound, true);
             // 2nd time or third
@@ -44,7 +48,7 @@ public class GameServiceImpl implements GameService{
             gameResult = new GameResult();
             gameResult.setGameResults(new ArrayList<>());
         } else {
-            gameResult = gameMap.get(gameId);
+            gameResult = gameMap.get(game.getGameId());
         }
 
         if (remainingAttempts == 0) {
@@ -54,12 +58,14 @@ public class GameServiceImpl implements GameService{
                     .map(GameResult::getGameResults)
                     .flatMap(List::stream)
                     .collect(Collectors.toList());
-            return new GameResult(game.getGameId(), resultList, remainingAttempts, getResult(game.getGameId(), gameMap));
+            gameResult.setFinalWinner(determineFinalWinner(game.getGameId(), gameMap));
+            gameMap.put(game.getGameId(), gameResult);
+            return new GameResult(game.getGameId(), resultList, remainingAttempts, determineFinalWinner(game.getGameId(), gameMap));
         } else {
             HandSign player1Sign = game.getPlayerOneHandSign();
             HandSign player2Sign = game.getPlayerTwoHandSign();
             int roundResult = determineRoundWinner(player1Sign, player2Sign);
-            gameResult.setGameId(gameId);
+            gameResult.setGameId(game.getGameId());
             gameResult.setRemainingAttempts(remainingAttempts - 1);
             if (roundResult == 1) {
                 gameResult.getGameResults().add("Player1");
@@ -68,12 +74,11 @@ public class GameServiceImpl implements GameService{
             } else {
                 gameResult.getGameResults().add("tie");
             }
-            gameMap.put(gameId, gameResult);
         }
         return gameResult;
     }
 
-    private String getResult(int gameId, Map<Integer, GameResult> gameMap) {
+    private String determineFinalWinner(int gameId, Map<Integer, GameResult> gameMap) {
         long player1Wins=gameMap.values().stream()
                 .map(GameResult::getGameResults)
                 .flatMap(List::stream)
