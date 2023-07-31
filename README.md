@@ -95,7 +95,7 @@ The API accepts a POST request with the following JSON structure as the request 
 
 ```jsonResponse
     {
-        "gameId": 4,
+        "gameId": 1,
         "gameResults": [
             "tie",
             "Player2",
